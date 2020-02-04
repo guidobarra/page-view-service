@@ -29,7 +29,7 @@
 		</developer>
 	</developers>
 
-	<parent>
+	<parent> <!-- la version del parent define la version de las dependencias del proyecto maven, ej: como es 2.0.0 la version de la dependencia actuator va hacer la 2.0.0 o parecido y asi con las demas dependencias-->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.0.BUILD-SNAPSHOT</version>
@@ -67,7 +67,7 @@
 			<artifactId>page-view-service-model</artifactId>
 			<version>1.3</version>
 		</dependency>
-		<dependency>
+		<dependency> <!-- esta dependencia va tener la versio 2.0 algo debido al parent. En la version 2.0 del actuator las url son http://localhost:8081/actuator/health, en la version 1.5.xx cambia -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
@@ -105,7 +105,7 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-<!-- 			<version>8.0.17</version> -->
+<!-- 			<version>8.0.17</version> -->  <!-- en el caso de utilizar un version de mysql en la imagen hay que fijarse, la version del conector -->  
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
